@@ -4,6 +4,7 @@ All words, both languages, are written by hand here and in ties.py.
     python3 tools/art.py && python3 tools/build.py
 """
 import html
+import ogcards
 import json
 import os
 import sys
@@ -288,6 +289,8 @@ def main():
         '<path d="M14 46 Q32 52 50 46 Q50 57 32 57 Q14 57 14 46Z" fill="#E0601F"/>'
         '<ellipse cx="32" cy="24" rx="6" ry="2" fill="none" stroke="#D6A42C" stroke-width="2.4"/><ellipse cx="32" cy="27.5" rx="6" ry="2" fill="none" stroke="#D6A42C" stroke-width="2.4"/></svg>')
     print("docs/index.html, docs/th/index.html, llms.txt, robots.txt, sitemap.xml, icon.svg")
+    ogcards.copy(os.path.join(HERE, ".."), DOCS)
+    ogcards.apply_tree(DOCS, BASE)
 
 
 if __name__ == "__main__":
